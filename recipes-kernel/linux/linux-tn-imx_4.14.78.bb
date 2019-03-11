@@ -12,13 +12,13 @@ require recipes-kernel/linux/linux-imx-src.inc
 
 DEPENDS += "lzop-native bc-native"
 
-TECHNEXION_GITHUB_MIRROR ?= "git://github.com/TechNexion/linux.git"
+TECHNEXION_GITHUB_MIRROR ?= "git://git@bitbucket.org/kapollo/linux-imx.git"
 
-SRCBRANCH = "tn-imx_4.9.88_2.0.0_ga-test"
+SRCBRANCH = "imx_4.14.78_1.0.0_ga"
 
-SRC_URI = "${TECHNEXION_GITHUB_MIRROR};branch=${SRCBRANCH}"
+SRC_URI = "${TECHNEXION_GITHUB_MIRROR};branch=${SRCBRANCH};protocol=ssh"
 
-SRCREV = "d69606b85de50b01e7c028ea2188308ab6612c80"
+SRCREV = "04815fdae3ae30b1445e7283fb3f526ea6b9bc0e"
 LOCALVERSION = "-${SRCBRANCH}"
 
 DEFAULT_PREFERENCE = "1"
