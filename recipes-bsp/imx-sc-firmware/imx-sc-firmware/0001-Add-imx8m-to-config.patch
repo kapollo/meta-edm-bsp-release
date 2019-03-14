@@ -1,0 +1,10 @@
+diff --git imx/meta-bsp/recipes-bsp/imx-sc-firmware/imx-sc-firmware_1.1.bb imx/meta-bsp/recipes-bsp/imx-sc-firmware/imx-sc-firmware_1.1.bb
+index bc917d30a..df9755d35 100644
+--- imx/meta-bsp/recipes-bsp/imx-sc-firmware/imx-sc-firmware_1.1.bb
++++ imx/meta-bsp/recipes-bsp/imx-sc-firmware/imx-sc-firmware_1.1.bb
+@@ -47,4 +47,4 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
+ 
+ FILES_${PN} = "/boot"
+ 
+-COMPATIBLE_MACHINE = "(mx8qm|mx8qxp)"
++COMPATIBLE_MACHINE = "(imx8m|imx8mq|mx8qm|mx8qxp)"
