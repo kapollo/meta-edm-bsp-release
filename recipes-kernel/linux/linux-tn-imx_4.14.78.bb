@@ -44,7 +44,8 @@ do_copy_defconfig () {
 	fi
 }
 
-COMPATIBLE_MACHINE = "(mx6|mx7|mx8)"
+#COMPATIBLE_MACHINE = "(mx6|mx7|mx8m|pico-imx8m)"
+COMPATIBLE_MACHINE = "(mx6|mx7|mx8m)"
 EXTRA_OEMAKE_append_mx6 = " ARCH=arm"
 EXTRA_OEMAKE_append_mx7 = " ARCH=arm"
 EXTRA_OEMAKE_append_mx8 = " ARCH=arm64"
