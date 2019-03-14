@@ -53,13 +53,11 @@ clean_up()
 }
 
 # Patch recipes to fix bugs
-patch -Np1 -sr - sources/meta-fsl-bsp-release/imx/meta-bsp/recipes-bsp/imx-mkimage/imx-boot_0.2.bb < sources/meta-edm-bsp-release/patches/0001-imx-boot-pass-dtb-name-to-imx-mkimage-when-making-fl.patch
-patch -Np1 -sr - sources/meta-fsl-bsp-release/imx/meta-bsp/recipes-security/optee-imx/optee-os-imx_git.bb < sources/meta-edm-bsp-release/patches/0002-optee-os-imx-fix-build-failure-when-the-board-isn-t-.patch
 patch -Np1 -sr - sources/meta-fsl-bsp-release/imx/meta-bsp/classes/image_types_fsl.bbclass < sources/meta-edm-bsp-release/patches/0003-image_types_fsl.bbclass-change-to-put-u-boot.img-int.patch
-cp sources/meta-edm-bsp-release/patches/0001-add-no-sandbox-as-argument-by-default.patch sources/meta-browser/recipes-browser/chromium/files
-patch -Np1 -sr - sources/meta-browser/recipes-browser/chromium/chromium-gn.inc < sources/meta-edm-bsp-release/patches/0004-chromium-add-no-sandbox-as-default-argument.patch
 patch -Np1 -sr - sources/poky/meta/recipes-graphics/packagegroups/packagegroup-core-x11.bb < sources/meta-edm-bsp-release/patches/0005-packagegroup-core-x11.bb-remove-xinput-calibrator.patch
 patch -Np1 -sr - sources/meta-fsl-bsp-release/imx/meta-sdk/conf/distro/include/fsl-imx-preferred-env.inc < sources/meta-edm-bsp-release/patches/0006-fsl-imx-preferred-env-remove-u-boot-format-settings-.patch
+patch -Np1 -sr - sources/meta-fsl-bsp-release/imx/meta-bsp/recipes-bsp/imx-sc-firmware/imx-sc-firmware_1.1.bb < sources/meta-edm-bsp-release/patches/sumo/0001-Add-imx8m-to-config.patch  
+patch -Np1 -sr - sources/meta-fsl-bsp-release/imx/meta-bsp/recipes-bsp/firmware-imx/firmware-imx_8.0.bb < sources/meta-edm-bsp-release/patches/sumo/0002-Set-IMX8-in-flags.patch
 
 # get command line options
 OLD_OPTIND=$OPTIND
