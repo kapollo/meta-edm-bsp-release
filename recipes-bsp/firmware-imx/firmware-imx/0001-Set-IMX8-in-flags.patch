@@ -1,0 +1,13 @@
+diff --git imx/meta-bsp/recipes-bsp/firmware-imx/firmware-imx_8.0.bb imx/meta-bsp/recipes-bsp/firmware-imx/firmware-imx_8.0.bb
+index 5b6f61203..0ea47c16a 100644
+--- imx/meta-bsp/recipes-bsp/firmware-imx/firmware-imx_8.0.bb
++++ imx/meta-bsp/recipes-bsp/firmware-imx/firmware-imx_8.0.bb
+@@ -94,7 +94,7 @@ do_install() {
+     find ${D}${base_libdir}/firmware/ -name '*.mk' -exec rm '{}' ';'
+ }
+ 
+-IS_MX8 = "0"
++IS_MX8 = "8m"
+ IS_MX8_mx8m = "8m"
+ IS_MX8_mx8qm = "8qm"
+ IS_MX8_mx8qxp = "8qx"
